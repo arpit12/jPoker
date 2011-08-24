@@ -4,6 +4,8 @@
 <link rel='stylesheet' href='css/poker.css'>
 <link rel='shortcut icon' href='graphics/favicon.png'>
 <title>jPoker v1.0</title>
+<script src='js/jquery-1.6.2.min.js' type='text/javascript' ></script>
+<script src='js/poker.js' type='text/javascript' ></script>
 </head>
 <body>
 
@@ -14,7 +16,7 @@
 		<li class="current">home</li>
 		<li>deals</li>
 		<li>jPoker</li>
-		<li>logout</li>
+		<li>login</li>
 	</ul></nav>
 </div>
 
@@ -28,35 +30,25 @@
 		</ul>
 	</div>
 
-	<div class='maincontent'>
-		<div id="content">
-			<h1 class="label-green">Welcome {username}</h1>
-			You have {points} points and {bal}$ left with you.
-		</div>
-	</div>
+<?php
+	include_once 'class.user.php';
+	if(!checksession()){
+	?>
+		<script type='text/javascript' >
+			$('document').ready(function(){
+				$('ul#main-menu li').eq(3).trigger('click');
+				$('ul#main-menu li').click(function(){
+					$('ul#main-menu li').eq(3).trigger('click'); // Redirect back to login page if not logged in
+				})
+			});
+		</script>
 
-	<div class='maincontent'>
-		<div id="content">
-			<h1 class="label-green">Select a deal</h1>
-			You have {points} points and {bal}$ left with you.
-		</div>
-		
-		<div class="deal">
-			Buy 1000 points for 100 $ <span class='buyButton'>Buy</span>
-		</div>
-		
-	</div>
-
-	<div class='maincontent'>
-		<div id="content">
-			<h1 class="label-green">This is a free software</h1>
-			Love FOSS &#9829;. Get this code at <a href='https://github.com/jaseemabid/jPoker/'>github</a>.
-		</div>
-	</div>
-
-	<div class='maincontent' style='display:block'>
-		<div id="content">
-			<h1 class="label-green">Join or login</h1>
+		<div class='maincontent'>login to continue</div>
+		<div class='maincontent'>login to continue</div>
+		<div class='maincontent'>login to continue</div>
+		<div class='maincontent'>
+			<div id="content">
+				<h1 class="label-green">Join or login</h1>
 				<article class='form' style='position:relative; top:-60px;'>
 					<h2 class="label-red" style='margin-left:5px;'>login</h2>
 					<form action="login.php" method="post">
@@ -65,7 +57,6 @@
 						<p><input type="submit" value="login" /></p>
 					</form>
 				</article>
-
 				<article class='form'>
 					<h2 class="label-red" style='margin-left:5px;'>Join</h2>
 					<form action="join.php" method="post">
@@ -76,8 +67,52 @@
 						<p><input type="submit" value="join" /></p>
 					</form>
 				</article>
-
+			</div>
 		</div>
+
+		<?php
+	}
+	else {
+		$u = new user($_SESSION['uid']);
+		?>
+		<div class='maincontent' style='display:block'>
+			<div id="content">
+				<h1 class="label-green">Welcome {username}</h1>
+				You have {points} points and {bal}$ left with you.
+			</div>
+		</div>
+
+		<div class='maincontent'>
+			<div id="content">
+				<h1 class="label-green">Select a deal</h1>
+				You have {points} points and {bal}$ left with you.
+			</div>
+		
+			<div class="deal">
+				Buy 1000 points for 100 $ <span class='buyButton'>Buy</span>
+			</div>
+		
+		</div>
+
+		<div class='maincontent'>
+			<div id="content">
+				<h1 class="label-green">This is a free software</h1>
+				Love FOSS &#9829;. Get this code at <a href='https://github.com/jaseemabid/jPoker/'>github</a>.
+			</div>
+		</div>
+
+		<div class='maincontent' style='display:block'>
+			<div id="content">
+				<h1 class="label-green">logout and leave the game ?</h1>
+				Click <a href='logout.php'>here</a> to confirm
+			</div>is 
+		</div>
+
+		<?php
+	}
+?>
+
+
 	</div>
 
 </div>
@@ -86,7 +121,6 @@
 	&nbsp;&nbsp;&nbsp;"I love FOSS &#9829;". This is free software and souce can be obtained <a href='https://github.com/jaseemabid/jPoker/'>here</a>
 </footer>
 
-<script src='js/jquery-1.6.2.min.js' type='text/javascript' ></script>
-<script src='js/poker.js' type='text/javascript' ></script>
+
 </body>
 </html>
