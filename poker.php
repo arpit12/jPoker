@@ -8,7 +8,8 @@
 <body>
 
 <div id='top'>
-	<div id="logo"><span class="logo-big">jPOKER</span><br><span class="logo-sub">A poker server</span></div>
+	<a href='/poker/poker.php'>
+	<div id="logo"><span class="logo-big">jPOKER</span><br><span class="logo-sub">A poker server</span></div></a>
 	<nav><ul id="main-menu">
 		<li class="current">home</li>
 		<li>deals</li>
@@ -27,14 +28,14 @@
 		</ul>
 	</div>
 
-	<div class='maincontent' >
+	<div class='maincontent'>
 		<div id="content">
 			<h1 class="label-green">Welcome {username}</h1>
 			You have {points} points and {bal}$ left with you.
 		</div>
 	</div>
 
-	<div class='maincontent' style='display:block'>
+	<div class='maincontent'>
 		<div id="content">
 			<h1 class="label-green">Select a deal</h1>
 			You have {points} points and {bal}$ left with you.
@@ -53,9 +54,27 @@
 		</div>
 	</div>
 
-	<div class='maincontent'>
+	<div class='maincontent' style='display:block'>
 		<div id="content">
 			<h1 class="label-green">Join or login</h1>
+				<article class='form' style='position:relative; top:-30px;'>
+					<h2 class="label-red" style='margin-left:5px;'>login</h2>
+					<form action="login.php" method="post">
+						<input type="text" name="uname" placeholder="Username"/><br />
+						<input type="password" name="password" placeholder="Password"/><br />
+						<p><input type="submit" value="login" /></p>
+					</form>
+				</article>
+
+				<article class='form'>
+					<h2 class="label-red" style='margin-left:5px;'>Join</h2>
+					<form action="join.php" method="post">
+						<input type="text" name="uname" placeholder="Username"/><br />
+						<input type="password" name="password" placeholder="Password"/><br />
+						<input type="password" name="password" placeholder="Password again"/><br />
+						<p><input type="submit" value="join" /></p>
+					</form>
+				</article>
 
 		</div>
 	</div>
