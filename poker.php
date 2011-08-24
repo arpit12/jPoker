@@ -48,7 +48,12 @@
 		<div class='maincontent'>login to continue</div>
 		<div class='maincontent'>
 			<div id="content">
-				<h1 class="label-green">Join or login</h1>
+				<?php
+					if(isset($_GET['user']))
+						echo "<h1 class='label-green'>Welcome ".$_GET['user'].". Now login to continue</h1>";
+					else
+						echo "<h1 class='label-green'>Join or login</h1>";
+				?>
 				<article class='form' style='position:relative; top:-60px;'>
 					<h2 class="label-red" style='margin-left:5px;'>login</h2>
 					<form action="login.php" method="post">
