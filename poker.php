@@ -27,18 +27,23 @@
 		</ul>
 	</div>
 
-	<div class='maincontent' style='display:block'>
+	<div class='maincontent' >
 		<div id="content">
 			<h1 class="label-green">Welcome {username}</h1>
 			You have {points} points and {bal}$ left with you.
 		</div>
 	</div>
 
-	<div class='maincontent'>
+	<div class='maincontent' style='display:block'>
 		<div id="content">
 			<h1 class="label-green">Select a deal</h1>
 			You have {points} points and {bal}$ left with you.
 		</div>
+		
+		<div class="deal">
+			Buy 1000 points for 100 $ <span class='buyButton'>Buy</span>
+		</div>
+		
 	</div>
 
 	<div class='maincontent'>
