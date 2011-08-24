@@ -57,7 +57,7 @@
 	<div class='maincontent' style='display:block'>
 		<div id="content">
 			<h1 class="label-green">Join or login</h1>
-				<article class='form' style='position:relative; top:-30px;'>
+				<article class='form' style='position:relative; top:-60px;'>
 					<h2 class="label-red" style='margin-left:5px;'>login</h2>
 					<form action="login.php" method="post">
 						<input type="text" name="uname" placeholder="Username"/><br />
@@ -69,6 +69,7 @@
 				<article class='form'>
 					<h2 class="label-red" style='margin-left:5px;'>Join</h2>
 					<form action="join.php" method="post">
+						<input type="text" name="uid" placeholder="User Id"/><br />
 						<input type="text" name="uname" placeholder="Username"/><br />
 						<input type="password" name="password" placeholder="Password"/><br />
 						<input type="password" name="password" placeholder="Password again"/><br />
