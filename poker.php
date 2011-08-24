@@ -49,7 +49,7 @@
 	<div class='maincontent'>
 		<div id="content">
 			<h1 class="label-green">This is a free software</h1>
-			Love FOSS &#9829;. Get this code at github
+			Love FOSS &#9829;. Get this code at <a href='https://github.com/jaseemabid/jPoker/'>github</a>.
 		</div>
 	</div>
 
@@ -63,7 +63,7 @@
 </div>
 
 <footer>
-	&nbsp;&nbsp;&nbsp;"I love FOSS &#9829;". This is free software and souce can be obtained <a href=''>here</a>
+	&nbsp;&nbsp;&nbsp;"I love FOSS &#9829;". This is free software and souce can be obtained <a href='https://github.com/jaseemabid/jPoker/'>here</a>
 </footer>
 
 <script src='js/jquery-1.6.2.min.js' type='text/javascript' ></script>
