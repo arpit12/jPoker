@@ -106,11 +106,11 @@
 			</div>
 		</div>
 
-		<div class='maincontent' style='display:block'>
+		<div class='maincontent'>
 			<div id="content">
 				<h1 class="label-green">logout and leave the game ?</h1>
 				Click <a href='logout.php'>here</a> to confirm
-			</div>is 
+			</div>
 		</div>
 
 		<?php
