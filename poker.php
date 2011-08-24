@@ -16,7 +16,14 @@
 		<li class="current">home</li>
 		<li>deals</li>
 		<li>jPoker</li>
-		<li>login</li>
+		<?php
+			include_once 'class.user.php';
+			if(!checksession()) {
+				echo "<li>login</li>";
+			} else {
+				echo "<li>logout</li>";
+			}
+		?>
 	</ul></nav>
 </div>
 
@@ -31,7 +38,6 @@
 	</div>
 
 <?php
-	include_once 'class.user.php';
 	if(!checksession()){
 	?>
 		<script type='text/javascript' >
@@ -82,15 +88,15 @@
 		?>
 		<div class='maincontent' style='display:block'>
 			<div id="content">
-				<h1 class="label-green">Welcome {username}</h1>
-				You have {points} points and {bal}$ left with you.
+				<h1 class="label-green">Welcome <?php echo $_SESSION['name']; ?> </h1>
+				You have <?php echo $_SESSION['points']; ?> points and <?php echo $_SESSION['bal']; ?>$ left with you.
 			</div>
 		</div>
 
 		<div class='maincontent'>
 			<div id="content">
 				<h1 class="label-green">Select a deal</h1>
-				You have {points} points and {bal}$ left with you.
+				You have <?php echo $_SESSION['points']; ?> points and <?php echo $_SESSION['bal']; ?>$ left with you.
 			</div>
 		
 			<div class="deal">
