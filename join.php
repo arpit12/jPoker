@@ -6,5 +6,5 @@
 	$c = pg_escape_string($_POST['password']);
 	echo $a.$b.$c;
 	$newUser = new user($a,$b,$c);
-	header( "Location: /poker/poker.php?user=".$newUser->getUsername());
+	header( "Location: /poker/index.php?user=".$newUser->getUsername());
 ?>
