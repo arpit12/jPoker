@@ -1,0 +1,127 @@
+body {
+	color: #333333;
+	font-family: helvetica,sans-serif;
+	margin: auto;
+	padding-top: 1.5em;
+	width: 60em;
+}
+h1, h2, h3, h4, h5 {
+	color: #666666;
+	font-weight: normal;
+	letter-spacing: 0.1em;
+	padding-left: 0.75em;
+}
+h1 {
+	font-size: 1.8em;
+	margin-left: -1em;
+}
+h2 {
+	font-size: 1.4em;
+	margin-left: -1.2em;
+}
+#top {
+	border-bottom: 1px solid #BBBBBB;
+	height: 5em;
+	padding-bottom: 3em;
+}
+#logo {
+	border-right: 1px solid #BBBBBB;
+	color: #555555;
+	display: inline;
+	float: left;
+	padding-bottom: 1em;
+	padding-right: 1.5em;
+	padding-top: 1em;
+}
+.logo-big {
+	color: #666666;
+	font-size: 2.5em;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+.logo-sub {
+	letter-spacing: 0.2em;
+}
+
+div#mainbox {
+	min-height :400px;
+}
+
+ul#main-menu {
+	display: inline;
+	float: left;
+	list-style: none outside none;
+	padding-left: 2.5em;
+	padding-top: 1.25em;
+}
+#main-menu li {
+	color: #666666;
+	display: inline;
+	font-size: 1em;
+	letter-spacing: 0.1em;
+	margin-right: 1em;
+	padding-bottom: 0.25em;
+	cursor:pointer;
+}
+
+#main-menu li:hover {
+	color: #000000;
+	text-decoration: none;
+}
+#main-menu li.current {
+	border-bottom: 3px solid #00AA00;
+	color: #000000;
+	display: inline;
+	padding-bottom: 0.125em;
+}
+
+#content {
+	border-right: 1px solid #BBBBBB;
+	margin-bottom: 2em;
+	margin-left: 2em;
+	margin-top: 2em;
+	padding-right: 1em;
+	width: 40em;
+}
+#content p {
+	line-height: 1.5em;
+}
+#sidebar {
+	float: right;
+	width: 15em;
+}
+#quicklinks {
+	list-style: none outside none;
+}
+ul#quicklinks {
+	font-size: 0.75em;
+	padding-left: 1.25em;
+}
+.label-yellow {
+	border-left: 4px solid #EEEE00;
+}
+.label-green {
+	border-left: 4px solid #008800;
+}
+.label-red {
+	border-left: 4px solid #880000;
+}
+
+footer {
+	border-top: 1px solid #BBBBBB;
+}
+code {
+	border: 1px none;
+	line-height: 1.5em;
+	background: none repeat scroll 0 0 black;
+	border: 2px solid #BBBBBB;
+	color: #efefef;
+	margin: 1em;
+	padding: 1em;
+	width: 35em;
+}
+
+div.maincontent {
+	display:none;
+}
+
