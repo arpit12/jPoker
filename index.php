@@ -10,7 +10,7 @@
 <body>
 
 <div id='top'>
-	<a href='/poker/poker.php'>
+	<a href='/poker/'>
 	<div id="logo"><span class="logo-big">jPOKER</span><br><span class="logo-sub">A poker server</span></div></a>
 	<nav><ul id="main-menu">
 		<li class="current">home</li>

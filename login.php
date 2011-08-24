@@ -4,5 +4,5 @@
 	$uname = pg_escape_string($_POST['uname']);
 	$upass = pg_escape_string($_POST['password']);
 	login($uname,$upass);
-	header( "Location: /poker/poker.php");
+	header( "Location: /poker/");
 ?>
