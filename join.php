@@ -1,6 +1,10 @@
 <?php
 
 	include_once 'class.user.php';
-	$user = new user(pg_escape_string($_POST['uid']),pg_escape_string($_POST['uname']),pg_escape_string($_POST['password']));
-	header( "Location: /poker/poker.php?user=".pg_escape_string($_POST['uname']) ) ;
+	$a = pg_escape_string($_POST['uid']);
+	$b = pg_escape_string($_POST['uname']);
+	$c = pg_escape_string($_POST['password']);
+	echo $a.$b.$c;
+	$newUser = new user($a,$b,$c);
+	header( "Location: /poker/poker.php?user=".$newUser->getUsername());
 ?>
