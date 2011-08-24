@@ -74,5 +74,27 @@ function checkSession()
 		return false;
 }
 
+function login($uname,$upass) {
+	$uname=pg_escape_string($uname);
+	$upass=sha1($upass);
+	$sql="Select em_id, em_name, em_bal, em_points from employee where em_name='$uname' and em_pass='$upass'";
+	$res=dbquery($sql);
+	if($res) {
+		$user=resource2array($res);
+		session_start();
+		$_SESSION['uid']=$user[0];
+		$_SESSION['name']=$user[1];
+		$_SESSION['bal']=$user[2];
+		$_SESSION['points']=$user[3];
+		return 1;
+	}
+	return 0;
+}
+
+function logout() {
+	session_start();
+	session_destroy();
+	$_SESSION=array();
+}
 
 ?>
